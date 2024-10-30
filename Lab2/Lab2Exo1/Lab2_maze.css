@@ -1,3 +1,7 @@
+/*
+CSE 190 M Lab 6 CSS file
+You don't need to download or edit this file.
+*/
 
 h1, h2 {
 	text-align: center;
@@ -9,7 +13,7 @@ p {
 }
 
 #maze {
-	margin: 100px auto;
+	margin: auto;
 	position: relative;
 	height: 300px;
 	width: 500px;
@@ -22,7 +26,7 @@ p {
 	width: 30px;
 	border: 1px solid black;
 	padding: 5px;
-	cursor: default;
+	cursor: pointer;
 	
 	font-family: "Helvetica", "Arial", sans-serif;
 	font-size: 25pt;
