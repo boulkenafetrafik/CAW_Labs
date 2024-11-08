@@ -10,4 +10,4 @@ function mean(scores) {
 }
 
 
-module.exports = mean;
+module.exports = { mean };
