@@ -1,0 +1,80 @@
+.auth-form-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-form-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .auth-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .auth-form-container input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .auth-form-container input:focus {
+    border-color: #4caf50;
+  }
+  
+  .auth-form-container button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-form-container button:hover {
+    background-color: #45a049;
+  }
+  
+  .auth-form-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .auth-form-container li {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .auth-form-container button.delete {
+    background-color: #f44336;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    color: #fff;
+  }
+  
+  .auth-form-container button.delete:hover {
+    background-color: #e53935;
+  }
+  
