@@ -5,10 +5,4 @@ function mean(scores) {
     }
     return sum / scores.length;
 }
-<<<<<<< HEAD
-
-
-module.exports = { mean };
-=======
 module.exports = mean;
->>>>>>> b1332b9 (add lab 4)
