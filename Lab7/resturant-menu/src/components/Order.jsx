@@ -1,11 +1,11 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-
+import './styles/order.css'
 function Order() {
     const {state} = useLocation();
     const orderItems = state;
   return (
-    <div>
+    <div className='order'>
         <h1>Order Details</h1>
         <p>Your order has been placed successfully.</p>
         <div className="order-items">

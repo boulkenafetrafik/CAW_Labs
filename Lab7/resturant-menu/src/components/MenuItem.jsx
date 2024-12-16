@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './styles/menu-item.css'
 function MenuItem({image, name, price, description, addToCart }) {
     return (
         <div className='menu-item'>

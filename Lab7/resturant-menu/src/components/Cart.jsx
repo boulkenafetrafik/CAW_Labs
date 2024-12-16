@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import './styles/cart.css';
 
 function Cart() {
     const [items, setItems] = useState([]);
@@ -44,30 +45,32 @@ function Cart() {
     const totalPrice = items.reduce((total, item) => total + item.price * item.quantity, 0);
 
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1 style={{ borderBottom: '2px solid #ccc', paddingBottom: '10px' }}>Cart</h1>
-            <ul style={{ listStyleType: 'none', padding: 0 }}>
+        <div className='cart' >
+            <h1 >Cart</h1>
+            <ul >
                 {items.map(item => (
-                    <li key={item.id} style={{ marginBottom: '10px', display: 'flex', alignItems: 'center' }}>
-                        <img src={item.image} alt={item.name} style={{ width: '50px', height: '50px', marginRight: '10px' }} />
-                        <span style={{ flex: 1 }}>{item.name} - {item.price} x {item.quantity} DA</span>
-                        <button 
-                            onClick={() => decreaseQuantity(item.id)} 
-                            style={{ marginRight: '5px', padding: '5px 10px', cursor: 'pointer' }}
-                        >
-                            -
-                        </button>
-                        <span>{item.quantity}</span>
-                        <button 
-                            onClick={() => increaseQuantity(item.id)} 
-                            style={{ padding: '5px 10px', cursor: 'pointer' }}
-                        >
-                            +
-                        </button>
+                    <li key={item.id} >
+                        <img src={item.image} alt={item.name}  />
+                        <span style={{ flex: 1 }}>{item.name} - {item.price} DA</span>
+                        <div className="btns" >
+                            <button 
+                                onClick={() => decreaseQuantity(item.id)} 
+                            >
+                                -
+                            </button>
+                            <span>{item.quantity}</span>
+                            <button 
+                                onClick={() => increaseQuantity(item.id)} 
+                                style={{ padding: '5px 10px', cursor: 'pointer' }}
+                            >
+                                +
+                            </button>
+                        </div>
+                        
                     </li>
                 ))}
             </ul>
-            <h2 style={{ borderTop: '2px solid #ccc', paddingTop: '10px' }}>Total Price: {totalPrice} DA</h2>
+            <h2 >Total Price: {totalPrice} DA</h2>
             <div className="checkout">
                 <Link to = "/order" state = {items}><button style={{ padding: '10px 20px', marginTop: '10px', cursor: 'pointer' }}>Place Order</button></Link>
 

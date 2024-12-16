@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MenuItem from './MenuItem'
 import { Link } from 'react-router-dom'
-
+import './styles/menu-display.css'
 function MenuDisplay() {
     const [cartItems, setCartItems] = useState([])
     const addToCart = (item)=>{
